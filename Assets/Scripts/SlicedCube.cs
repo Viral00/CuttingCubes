@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SlicedCube : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "CubeDestroyer")
+        if (collision.gameObject.tag == "Platform")
         {
-            Destroy(this);
+            gameObject.transform.gameObject.GetComponentInChildren<Transform>().parent = collision.transform;
         }
-        if (collision.gameObject.tag == "platform");
-        {
-            this.transform.parent = collision.transform;
-        }
+    }
+    private void Update()
+    {
+        Destroy(gameObject, 3f);
     }
 }

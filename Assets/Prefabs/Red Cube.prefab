@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 694699095336028705}
-  - component: {fileID: -8170931432846282071}
   m_Layer: 0
   m_Name: Red Cube
   m_TagString: Cube
@@ -32,20 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-8170931432846282071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694699095336028706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a22229ec9939928458cd67af66050a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slicedCubePrefab: {fileID: -233630984647044825, guid: 796ad164780a88d44906289e9a8606de,
-    type: 3}
 --- !u!1 &694699096817466719
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,9 +44,10 @@ GameObject:
   - component: {fileID: 694699096817466716}
   - component: {fileID: 694699096817466717}
   - component: {fileID: 694699096817466690}
+  - component: {fileID: 360854052}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +60,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694699096817466719}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.461269, y: 8.18, z: 11.135958}
+  m_LocalPosition: {x: -6.571, y: -7.163054, z: -12.62596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 694699095336028705}
@@ -156,3 +142,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &360854052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694699096817466719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22229ec9939928458cd67af66050a67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slicedCubePrefab: {fileID: 622295062409522845, guid: 796ad164780a88d44906289e9a8606de,
+    type: 3}

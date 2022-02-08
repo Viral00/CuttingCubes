@@ -12,7 +12,7 @@ public class CubePool : MonoBehaviour
     {
         for (int i = 0; i < amountToPool; i++)
         {
-            GameObject Cube = Instantiate(CubePrefab, SpawnPoint.position, SpawnPoint.rotation);
+            GameObject Cube = Instantiate(CubePrefab, SpawnPoint.transform.position, Quaternion.identity);
             Cube.SetActive(false);
             poolCube.Add(Cube);
         }

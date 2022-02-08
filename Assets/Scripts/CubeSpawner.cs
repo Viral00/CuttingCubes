@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class CubeSpawner : MonoBehaviour
 {
@@ -7,18 +8,17 @@ public class CubeSpawner : MonoBehaviour
 
     private void Update()
     {
-        InvokeRepeating("SpawnCube", 1.0f, 5.0f);
+        StartCoroutine(SpawnCube());
     }
 
-    private void SpawnCube()
+    private IEnumerator SpawnCube()
     {
         GameObject cube = cubePool.GetPooledObject();
-
         if (cube != null)
         {
-            cube.transform.position = spawnPosition.transform.position* Time.deltaTime;
-            cube.SetActive(true);
+            cube.transform.position = spawnPosition.transform.position;
+            cube.SetActive(true);  
         }
-
+        yield return new WaitForSeconds(4);
     }
 }

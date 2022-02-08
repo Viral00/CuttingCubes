@@ -9,6 +9,7 @@ TagManager:
   - CubeDestroyer
   - Cube
   - Sliced Cube
+  - Platform
   layers:
   - Default
   - TransparentFX
